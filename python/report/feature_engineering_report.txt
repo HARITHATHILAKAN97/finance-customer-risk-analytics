@@ -1,0 +1,24 @@
+FEATURE ENGINEERING REPORT
+==================================================
+Rows: 5000
+Columns after feature engineering: 59
+
+New columns created:
+- Age Group
+- Account Age Years
+- Transaction Recency Days
+- Credit Utilization %
+- Available Credit
+- Loan to Balance Ratio
+- Payment Timing Days
+- Complaint Flag
+- Pending Feedback Flag
+- Anomaly Flag
+- Risk Score
+- Risk Level
+- Customer Value Score
+- Customer Value Segment
+- Value Risk Segment
+
+Output file:
+C:\Users\netcom\Desktop\portfolio\Finance_Customer_Risk_Analytics\data\processed\banking_features.csv

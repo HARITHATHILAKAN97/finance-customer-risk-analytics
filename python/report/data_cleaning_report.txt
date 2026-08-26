@@ -1,0 +1,109 @@
+======================================================================
+FINANCE CUSTOMER RISK & PROFITABILITY ANALYTICS
+DATA CLEANING REPORT
+======================================================================
+
+1. INITIAL DATASET
+--------------------------------------------------
+Rows before cleaning: 5000
+Columns before cleaning: 40
+
+2. DUPLICATE ROW CLEANING
+--------------------------------------------------
+Duplicate rows found: 0
+No duplicate rows removed.
+
+3. CUSTOMER ID CHECK
+--------------------------------------------------
+Duplicate Customer IDs: 0
+Customer ID uniqueness confirmed.
+
+4. MISSING VALUE CLEANING
+--------------------------------------------------
+Missing values before cleaning: 0
+No missing values found. No action required.
+
+5. TEXT STANDARDIZATION
+--------------------------------------------------
+Gender: whitespace removed.
+City: whitespace removed.
+Account Type: whitespace removed.
+Transaction Type: whitespace removed.
+Loan Type: whitespace removed.
+Loan Status: whitespace removed.
+Card Type: whitespace removed.
+Feedback Type: whitespace removed.
+Resolution Status: whitespace removed.
+
+6. DATE CONVERSION
+--------------------------------------------------
+Date Of Account Opening: converted to datetime.
+Last Transaction Date: converted to datetime.
+Transaction Date: converted to datetime.
+Approval/Rejection Date: converted to datetime.
+Payment Due Date: converted to datetime.
+Last Credit Card Payment Date: converted to datetime.
+Feedback Date: converted to datetime.
+Resolution Date: converted to datetime.
+
+7. NUMERIC COLUMN CHECK
+--------------------------------------------------
+Age: converted to numeric.
+Account Balance: converted to numeric.
+Transaction Amount: converted to numeric.
+Account Balance After Transaction: converted to numeric.
+Loan Amount: converted to numeric.
+Interest Rate: converted to numeric.
+Loan Term: converted to numeric.
+Credit Limit: converted to numeric.
+Credit Card Balance: converted to numeric.
+Minimum Payment Due: converted to numeric.
+Rewards Points: converted to numeric.
+Anomaly: converted to numeric.
+
+8. AGE VALIDATION
+--------------------------------------------------
+Invalid age records: 0
+Age values are within the expected range.
+
+9. FINANCIAL VALUE CHECK
+--------------------------------------------------
+Transaction Amount: 0 negative values.
+Loan Amount: 0 negative values.
+Credit Limit: 0 negative values.
+Credit Card Balance: 0 negative values.
+Minimum Payment Due: 0 negative values.
+Rewards Points: 0 negative values.
+
+10. CREDIT UTILIZATION CHECK
+--------------------------------------------------
+Credit Utilization % calculated successfully.
+
+11. PAYMENT DELAY FEATURE
+--------------------------------------------------
+Payment Delay Days calculated.
+Negative values indicate payment before the due date.
+Positive values indicate payment after the due date.
+
+12. ACCOUNT AGE FEATURE
+--------------------------------------------------
+Account Age Days calculated.
+
+13. LOAN EXPOSURE FEATURE
+--------------------------------------------------
+Loan Exposure calculated from Loan Amount.
+
+14. ANOMALY FLAG
+--------------------------------------------------
+Risk Flag created from Anomaly.
+
+15. FINAL QUALITY CHECK
+--------------------------------------------------
+Missing values after cleaning: 0
+Rows after cleaning: 5000
+Columns after cleaning: 45
+
+16. OUTPUT
+--------------------------------------------------
+Cleaned dataset saved to:
+C:\Users\netcom\Desktop\portfolio\Finance_Customer_Risk_Analytics\data\cleaned\banking_cleaned.csv

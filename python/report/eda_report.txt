@@ -1,0 +1,105 @@
+FINANCE CUSTOMER RISK & PROFITABILITY ANALYTICS
+EDA REPORT
+============================================================
+
+Dataset rows: 5000
+Dataset columns: 59
+
+
+CUSTOMER DEMOGRAPHICS
+----------------------------------------
+
+Gender Distribution:
+Gender
+Female    1727
+Other     1639
+Male      1634
+
+Age Group Distribution:
+Age Group
+18-25    791
+26-35    956
+36-45    963
+46-55    915
+56-65    978
+66+      397
+
+
+ACCOUNT ANALYSIS
+----------------------------------------
+
+Account Type:
+Account Type
+Savings    2507
+Current    2493
+
+Average Account Balance:
+5060.57
+
+
+LOAN ANALYSIS
+----------------------------------------
+
+Loan Status:
+Loan Status
+Approved    1710
+Closed      1660
+Rejected    1630
+
+Average Loan Amount:
+25501.04
+
+
+CREDIT CARD ANALYSIS
+----------------------------------------
+
+Average Credit Utilization:
+63.24
+
+
+RISK ANALYSIS
+----------------------------------------
+
+Risk Level Distribution:
+Risk Level
+Medium    2460
+Low       1824
+High       716
+
+Average Risk Score:
+1.87
+
+
+CUSTOMER VALUE ANALYSIS
+----------------------------------------
+
+Customer Value Segment:
+Customer Value Segment
+Medium Value    3096
+High Value      1014
+Low Value        890
+
+
+VALUE × RISK ANALYSIS
+----------------------------------------
+Value Risk Segment
+Develop    3421
+Monitor     662
+Review      565
+Grow        352
+
+
+CORRELATION MATRIX
+----------------------------------------
+                        Age  Account Balance  Transaction Amount  Loan Amount  Interest Rate  Credit Limit  Credit Card Balance  Credit Utilization %  Loan to Balance Ratio  Risk Score  Customer Value Score
+Age                    1.00             0.02                0.02        -0.04           0.01          0.01                 0.01                  0.01                  -0.05       -0.01                 -0.00
+Account Balance        0.02             1.00                0.03        -0.00           0.01          0.00                -0.00                 -0.01                  -0.47        0.01                  0.81
+Transaction Amount     0.02             0.03                1.00        -0.01           0.01          0.03                -0.00                 -0.02                  -0.02       -0.02                  0.02
+Loan Amount           -0.04            -0.00               -0.01         1.00           0.00          0.02                -0.01                 -0.01                   0.25        0.18                  0.48
+Interest Rate          0.01             0.01                0.01         0.00           1.00          0.02                -0.01                 -0.02                   0.01       -0.02                  0.01
+Credit Limit           0.01             0.00                0.03         0.02           0.02          1.00                -0.01                 -0.60                  -0.00       -0.36                  0.01
+Credit Card Balance    0.01            -0.00               -0.00        -0.01          -0.01         -0.01                 1.00                  0.57                  -0.01        0.29                 -0.02
+Credit Utilization %   0.01            -0.01               -0.02        -0.01          -0.02         -0.60                 0.57                  1.00                  -0.01        0.47                 -0.03
+Loan to Balance Ratio -0.05            -0.47               -0.02         0.25           0.01         -0.00                -0.01                 -0.01                   1.00        0.02                 -0.26
+Risk Score            -0.01             0.01               -0.02         0.18          -0.02         -0.36                 0.29                  0.47                   0.02        1.00                  0.09
+Customer Value Score  -0.00             0.81                0.02         0.48           0.01          0.01                -0.02                 -0.03                  -0.26        0.09                  1.00

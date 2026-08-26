@@ -1,0 +1,151 @@
+======================================================================
+FINANCE CUSTOMER RISK & PROFITABILITY ANALYTICS
+DATA QUALITY CHECK REPORT
+======================================================================
+
+1. DATASET STRUCTURE CHECK
+--------------------------------------------------
+Expected rows: 5000
+Actual rows: 5000
+Row count check: PASS
+
+Expected columns: 40
+Actual columns: 40
+Column count check: PASS
+
+2. MISSING VALUE CHECK
+--------------------------------------------------
+Total missing values: 0
+Missing value check: PASS
+No columns contain missing values.
+
+3. DUPLICATE ROW CHECK
+--------------------------------------------------
+Duplicate rows: 0
+Duplicate row check: PASS
+
+4. CUSTOMER ID CHECK
+--------------------------------------------------
+Total Customer IDs: 5000
+Unique Customer IDs: 5000
+Duplicate Customer IDs: 0
+Customer ID check: PASS
+
+5. IDENTIFIER NULL CHECK
+--------------------------------------------------
+Customer ID: 0 missing
+TransactionID: 0 missing
+Loan ID: 0 missing
+CardID: 0 missing
+Feedback ID: 0 missing
+
+6. AGE VALIDATION
+--------------------------------------------------
+Age values below 18 or above 100: 0
+Age check: PASS
+
+7. NEGATIVE FINANCIAL VALUE CHECK
+--------------------------------------------------
+Account Balance: 0 negative values
+Transaction Amount: 0 negative values
+Loan Amount: 0 negative values
+Credit Limit: 0 negative values
+Credit Card Balance: 0 negative values
+Minimum Payment Due: 0 negative values
+Rewards Points: 0 negative values
+
+8. CREDIT CARD LIMIT CHECK
+--------------------------------------------------
+Credit card balance above credit limit: 855
+Credit limit check: REVIEW
+
+9. LOAN TERM VALIDATION
+--------------------------------------------------
+Expected loan terms: [12, 24, 36, 48, 60]
+Actual loan terms: [np.int64(12), np.int64(24), np.int64(36), np.int64(48), np.int64(60)]
+Loan term check: PASS
+
+10. CATEGORICAL VALUE CHECK
+--------------------------------------------------
+
+Account Type
+Expected: ['Current', 'Savings']
+Actual: ['Current', 'Savings']
+Category check: PASS
+
+Transaction Type
+Expected: ['Deposit', 'Transfer', 'Withdrawal']
+Actual: ['Deposit', 'Transfer', 'Withdrawal']
+Category check: PASS
+
+Loan Type
+Expected: ['Auto', 'Mortgage', 'Personal']
+Actual: ['Auto', 'Mortgage', 'Personal']
+Category check: PASS
+
+Loan Status
+Expected: ['Approved', 'Closed', 'Rejected']
+Actual: ['Approved', 'Closed', 'Rejected']
+Category check: PASS
+
+Card Type
+Expected: ['AMEX', 'MasterCard', 'Visa']
+Actual: ['AMEX', 'MasterCard', 'Visa']
+Category check: PASS
+
+Feedback Type
+Expected: ['Complaint', 'Praise', 'Suggestion']
+Actual: ['Complaint', 'Praise', 'Suggestion']
+Category check: PASS
+
+Resolution Status
+Expected: ['Pending', 'Resolved']
+Actual: ['Pending', 'Resolved']
+Category check: PASS
+
+Gender
+Expected: ['Female', 'Male', 'Other']
+Actual: ['Female', 'Male', 'Other']
+Category check: PASS
+
+Anomaly
+Expected: [-1, 1]
+Actual: [-1, 1]
+Category check: PASS
+
+11. INTEREST RATE VALIDATION
+--------------------------------------------------
+Interest rates below 0% or above 100%: 0
+Interest rate check: PASS
+
+12. CREDIT UTILIZATION CHECK
+--------------------------------------------------
+Negative utilization values: 0
+Utilization above 100%: 855
+Credit utilization calculation: PASS
+
+13. DATE QUALITY CHECK
+--------------------------------------------------
+Date Of Account Opening: 0 invalid dates
+Last Transaction Date: 0 invalid dates
+Transaction Date: 0 invalid dates
+Approval/Rejection Date: 0 invalid dates
+Payment Due Date: 0 invalid dates
+Last Credit Card Payment Date: 0 invalid dates
+Feedback Date: 0 invalid dates
+Resolution Date: 0 invalid dates
+
+14. ANOMALY FLAG CHECK
+--------------------------------------------------
+Invalid anomaly values: 0
+Anomaly flag check: PASS
+
+======================================================================
+DATA QUALITY SUMMARY
+======================================================================
+
+The above checks should be reviewed before data cleaning.
+
+Important principle:
+A REVIEW result does not automatically mean the data is wrong.
+It means the value requires investigation before deciding whether it should be cleaned.

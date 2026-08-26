@@ -1,0 +1,317 @@
+======================================================================
+FINANCE CUSTOMER RISK & PROFITABILITY ANALYTICS
+DATA INSPECTION REPORT
+======================================================================
+
+1. BASIC DATASET INFORMATION
+--------------------------------------------------
+Dataset file: Comprehensive_Banking_Database.csv
+Number of rows: 5000
+Number of columns: 40
+
+2. FIRST 5 ROWS
+--------------------------------------------------
+   Customer ID First Name Last Name  Age  Gender    Address           City  Contact Number                  Email Account Type  Account Balance Date Of Account Opening Last Transaction Date  TransactionID Transaction Date Transaction Type  Transaction Amount  Account Balance After Transaction  Branch ID  Loan ID  Loan Amount Loan Type  Interest Rate  Loan Term Approval/Rejection Date Loan Status  CardID   Card Type  Credit Limit  Credit Card Balance  Minimum Payment Due Payment Due Date Last Credit Card Payment Date  Rewards Points  Feedback ID Feedback Date Feedback Type Resolution Status Resolution Date  Anomaly
+0            1     Joshua      Hall   45    Male  Address_1     Fort Worth     19458794854    joshua.hall@kag.com      Current          1313.38               5/26/2006             4/23/2023              1        12/7/2023       Withdrawal             1457.61                            2770.99         43        1     32200.06  Mortgage           2.64         36               5/11/2021    Rejected       1        AMEX       1737.88              4524.32               226.22       11/26/2023                     3/20/2023            8142            1     10/6/2023    Suggestion          Resolved       1/22/2023        1
+1            2       Mark    Taylor   47  Female  Address_2     Louisville     19458794855    mark.taylor@kag.com      Current          5988.46                3/2/2006             1/27/2023              2        4/27/2023          Deposit             1660.99                            7649.45         63        2     47743.52      Auto           2.48         36               7/30/2020    Approved       2  MasterCard       1799.36               856.70                42.84        11/5/2023                     6/16/2023            4306            2      4/7/2023     Complaint          Resolved       8/27/2023        1
+2            3     Joseph    Flores   25  Female  Address_3   Philadelphia     19458794856  joseph.flores@kag.com      Current          8277.88               7/19/2015              1/1/2023              3         4/5/2023          Deposit              839.91                            7437.97         82        3     47981.31      Auto           7.84         24               1/17/2021      Closed       3        AMEX       6112.96              3242.36               162.12         1/8/2023                     3/20/2023            4842            3      9/7/2023        Praise           Pending       5/11/2023        1
+3            4      Kevin       Lee   52   Other  Address_4  Oklahoma City     19458794857      kevin.lee@kag.com      Savings          7487.21               1/30/2008              8/2/2023              4        7/28/2023       Withdrawal             4908.89                           12396.10         41        4      4482.80  Personal           7.21         48               2/15/2022    Approved       4  MasterCard       2069.41              4329.17               216.46         9/8/2023                    10/15/2023            9463            4     5/28/2023     Complaint          Resolved        7/5/2023        1
+4            5      Linda   Johnson   68   Other  Address_5        Phoenix     19458794858  linda.johnson@kag.com      Savings          6993.55               5/25/2021             3/27/2023              5        1/16/2023         Transfer              589.07                            6404.48          9        5      1092.33  Mortgage           5.37         12               7/31/2020    Approved       5        Visa       2765.30                25.72                 1.29         3/4/2023                     7/27/2023            2209            5     2/12/2023     Complaint          Resolved      11/21/2023        1
+
+3. COLUMN NAMES
+--------------------------------------------------
+Customer ID
+First Name
+Last Name
+Age
+Gender
+Address
+City
+Contact Number
+Email
+Account Type
+Account Balance
+Date Of Account Opening
+Last Transaction Date
+TransactionID
+Transaction Date
+Transaction Type
+Transaction Amount
+Account Balance After Transaction
+Branch ID
+Loan ID
+Loan Amount
+Loan Type
+Interest Rate
+Loan Term
+Approval/Rejection Date
+Loan Status
+CardID
+Card Type
+Credit Limit
+Credit Card Balance
+Minimum Payment Due
+Payment Due Date
+Last Credit Card Payment Date
+Rewards Points
+Feedback ID
+Feedback Date
+Feedback Type
+Resolution Status
+Resolution Date
+Anomaly
+
+4. DATA TYPES
+--------------------------------------------------
+Customer ID                            int64
+First Name                               str
+Last Name                                str
+Age                                    int64
+Gender                                   str
+Address                                  str
+City                                     str
+Contact Number                         int64
+Email                                    str
+Account Type                             str
+Account Balance                      float64
+Date Of Account Opening                  str
+Last Transaction Date                    str
+TransactionID                          int64
+Transaction Date                         str
+Transaction Type                         str
+Transaction Amount                   float64
+Account Balance After Transaction    float64
+Branch ID                              int64
+Loan ID                                int64
+Loan Amount                          float64
+Loan Type                                str
+Interest Rate                        float64
+Loan Term                              int64
+Approval/Rejection Date                  str
+Loan Status                              str
+CardID                                 int64
+Card Type                                str
+Credit Limit                         float64
+Credit Card Balance                  float64
+Minimum Payment Due                  float64
+Payment Due Date                         str
+Last Credit Card Payment Date            str
+Rewards Points                         int64
+Feedback ID                            int64
+Feedback Date                            str
+Feedback Type                            str
+Resolution Status                        str
+Resolution Date                          str
+Anomaly                                int64
+
+5. MISSING VALUE CHECK
+--------------------------------------------------
+Customer ID                          0
+First Name                           0
+Last Name                            0
+Age                                  0
+Gender                               0
+Address                              0
+City                                 0
+Contact Number                       0
+Email                                0
+Account Type                         0
+Account Balance                      0
+Date Of Account Opening              0
+Last Transaction Date                0
+TransactionID                        0
+Transaction Date                     0
+Transaction Type                     0
+Transaction Amount                   0
+Account Balance After Transaction    0
+Branch ID                            0
+Loan ID                              0
+Loan Amount                          0
+Loan Type                            0
+Interest Rate                        0
+Loan Term                            0
+Approval/Rejection Date              0
+Loan Status                          0
+CardID                               0
+Card Type                            0
+Credit Limit                         0
+Credit Card Balance                  0
+Minimum Payment Due                  0
+Payment Due Date                     0
+Last Credit Card Payment Date        0
+Rewards Points                       0
+Feedback ID                          0
+Feedback Date                        0
+Feedback Type                        0
+Resolution Status                    0
+Resolution Date                      0
+Anomaly                              0
+
+Total missing values: 0
+
+6. DUPLICATE ROW CHECK
+--------------------------------------------------
+Duplicate rows: 0
+
+7. CUSTOMER ID CHECK
+--------------------------------------------------
+Total rows: 5000
+Unique Customer IDs: 5000
+Duplicate Customer IDs: 0
+
+8. IDENTIFIER CHECK
+--------------------------------------------------
+Customer ID → Unique: 5000 | Duplicates: 0
+TransactionID → Unique: 5000 | Duplicates: 0
+Loan ID → Unique: 5000 | Duplicates: 0
+CardID → Unique: 5000 | Duplicates: 0
+Feedback ID → Unique: 5000 | Duplicates: 0
+
+9. NUMERICAL SUMMARY
+--------------------------------------------------
+       Customer ID          Age  Contact Number  Account Balance  TransactionID  Transaction Amount  Account Balance After Transaction    Branch ID      Loan ID   Loan Amount  Interest Rate    Loan Term       CardID  Credit Limit  Credit Card Balance  Minimum Payment Due  Rewards Points  Feedback ID      Anomaly
+count  5000.000000  5000.000000    5.000000e+03      5000.000000    5000.000000         5000.000000                        5000.000000  5000.000000  5000.000000   5000.000000    5000.000000  5000.000000  5000.000000   5000.000000           5000.00000          5000.000000     5000.000000  5000.000000  5000.000000
+mean   2500.500000    43.469800    1.945880e+10      5060.570918    2500.500000         2508.501144                        5037.418898    50.586800  2500.500000  25501.042806       5.505038    36.520800  2500.500000   5549.035830           2487.40084           124.370134     4966.161800  2500.500000     0.880000
+std    1443.520003    15.145672    1.443520e+03      2849.356481    1443.520003         1450.194986                        4053.220017    28.499539  1443.520003  14039.732628       2.629752    16.924315  1443.520003   2581.718105           1446.80295            72.340102     2901.410915  1443.520003     0.475021
+min       1.000000    18.000000    1.945879e+10       107.200000       1.000000           10.570000                       -4878.760000     1.000000     1.000000   1006.370000       1.000000    12.000000     1.000000   1007.000000              1.45000             0.070000        1.000000     1.000000    -1.000000
+25%    1250.750000    30.000000    1.945880e+10      2582.777500    1250.750000         1241.150000                        2047.205000    26.000000  1250.750000  13315.305000       3.200000    24.000000  1250.750000   3314.065000           1243.51750            62.180000     2475.250000  1250.750000     1.000000
+50%    2500.500000    43.000000    1.945880e+10      5075.500000    2500.500000         2494.025000                        5089.785000    50.000000  2500.500000  25909.705000       5.520000    36.000000  2500.500000   5567.485000           2461.62000           123.080000     4950.500000  2500.500000     1.000000
+75%    3750.250000    57.000000    1.945880e+10      7509.760000    3750.250000         3796.222500                        8036.367500    75.000000  3750.250000  37441.570000       7.832500    48.000000  3750.250000   7786.040000           3722.58000           186.125000     7483.250000  3750.250000     1.000000
+max    5000.000000    69.000000    1.945880e+10      9998.110000    5000.000000         4998.390000                       14911.380000    99.000000  5000.000000  49993.490000      10.000000    60.000000  5000.000000   9997.780000           4997.11000           249.860000     9999.000000  5000.000000     1.000000
+
+10. CATEGORICAL VALUE COUNTS
+--------------------------------------------------
+
+Gender:
+Gender
+Female    1727
+Other     1639
+Male      1634
+
+Account Type:
+Account Type
+Savings    2507
+Current    2493
+
+Transaction Type:
+Transaction Type
+Deposit       1698
+Withdrawal    1673
+Transfer      1629
+
+Loan Type:
+Loan Type
+Mortgage    1712
+Auto        1645
+Personal    1643
+
+Loan Status:
+Loan Status
+Approved    1710
+Closed      1660
+Rejected    1630
+
+Card Type:
+Card Type
+MasterCard    1696
+AMEX          1679
+Visa          1625
+
+Feedback Type:
+Feedback Type
+Suggestion    1689
+Complaint     1681
+Praise        1630
+
+Resolution Status:
+Resolution Status
+Pending     2504
+Resolved    2496
+
+Anomaly:
+Anomaly
+ 1    4700
+-1     300
+
+11. NUMERICAL RANGE CHECKS
+--------------------------------------------------
+Age → Minimum: 18 | Maximum: 69
+Account Balance → Minimum: 107.2 | Maximum: 9998.11
+Transaction Amount → Minimum: 10.57 | Maximum: 4998.39
+Loan Amount → Minimum: 1006.37 | Maximum: 49993.49
+Interest Rate → Minimum: 1.0 | Maximum: 10.0
+Credit Limit → Minimum: 1007.0 | Maximum: 9997.78
+Credit Card Balance → Minimum: 1.45 | Maximum: 4997.11
+Minimum Payment Due → Minimum: 0.07 | Maximum: 249.86
+Rewards Points → Minimum: 1 | Maximum: 9999
+
+12. FINANCIAL LOGIC CHECKS
+--------------------------------------------------
+Negative Account Balances: 0
+Negative Transaction Amounts: 0
+Negative Loan Amounts: 0
+Credit Card Balance > Credit Limit: 855
+
+13. LOAN TERM CHECK
+--------------------------------------------------
+Loan Term values: [np.int64(12), np.int64(24), np.int64(36), np.int64(48), np.int64(60)]
+
+14. DATE COLUMN CHECK
+--------------------------------------------------
+Date Of Account Opening → Data type: str
+Last Transaction Date → Data type: str
+Transaction Date → Data type: str
+Approval/Rejection Date → Data type: str
+Payment Due Date → Data type: str
+Last Credit Card Payment Date → Data type: str
+Feedback Date → Data type: str
+Resolution Date → Data type: str
+
+15. DATE VALIDATION
+--------------------------------------------------
+Date Of Account Opening → Invalid dates: 0
+Last Transaction Date → Invalid dates: 0
+Transaction Date → Invalid dates: 0
+Approval/Rejection Date → Invalid dates: 0
+Payment Due Date → Invalid dates: 0
+Last Credit Card Payment Date → Invalid dates: 0
+Feedback Date → Invalid dates: 0
+Resolution Date → Invalid dates: 0
+
+16. ANOMALY CHECK
+--------------------------------------------------
+Anomaly
+ 1    4700
+-1     300
+
+Anomaly percentages:
+Anomaly
+ 1    94.0
+-1     6.0
+
+17. CREDIT UTILIZATION PREVIEW
+--------------------------------------------------
+count    5000.000000
+mean       63.240760
+std        65.911905
+min         0.029797
+25%        22.788718
+50%        44.226336
+75%        76.070623
+max       472.568974
+
+Customers with utilization > 80%: 1173
+Customers with utilization > 100%: 855
+
+======================================================================
+FINAL INSPECTION SUMMARY
+======================================================================
+Rows: 5000
+Columns: 40
+Missing values: 0
+Duplicate rows: 0
+Unique customers: 5000
+
+Inspection completed successfully.
+
+NOTE: No data cleaning or modification was performed.
